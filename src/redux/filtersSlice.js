@@ -11,6 +11,6 @@ const filtersSlise = createSlice({
 });
 
 export const { changeFilter } = filtersSlise.actions;
-export const filtersReducer = filtersSlise.reducer;
+export const filtersSliceReducer = filtersSlise.reducer;
 export const selectNameFilter = state => state.filters.name;
 // state.filters.name; filters - ключ редюсера
