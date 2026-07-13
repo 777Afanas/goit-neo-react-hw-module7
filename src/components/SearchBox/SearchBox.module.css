@@ -1,0 +1,49 @@
+/* .searchBar {
+    width: 392px;
+    width: 480px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+
+}
+
+.textInput {
+    border: none;
+    border-radius: 8px;
+    width: 360px;
+    width: 480px;
+    height: 36px;
+    outline: 2px solid #212121;
+    border: 2px solid transparent;
+    border-radius: 4px;
+} */
+
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.searchBar p {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.searchInput {
+    padding: 6px 8px;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.searchInput:focus {
+    outline: 2px solid #105ba3;
+    /* Синій фокус */
+}

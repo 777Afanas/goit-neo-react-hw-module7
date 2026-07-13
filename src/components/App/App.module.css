@@ -1,0 +1,126 @@
+/* .app {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+/* --- Мобільні девайси (Базові стилі) --- */
+.app {
+  max-width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app h1 {
+  font-family: sans-serif;
+  font-size: 28px;
+  margin: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Відступ між формою та пошуком всередині колонки */
+}
+
+/* --- Планшетний режим --- */
+@media (min-width: 768px) {
+  .app {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  /* Обмежуємо ширину всієї лівої колонки на планшеті */
+  .sidebar {
+    max-width: 280px;
+  }
+}
+
+/* --- Десктопний режим (від 1200px) --- */
+/* @media (min-width: 1200px) {
+  .app {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    
+    row-gap: 24px;
+    align-items: start;
+   
+  }
+
+  
+  .app h1 {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+ 
+  .sidebar {
+    flex: 0 0 280px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    justify-content: flex-start;
+  }
+  
+  .app > ul {
+   
+    flex: 1 1 calc(100% - 320px);
+    max-width: calc(100% - 320px);
+    margin: 0;
+  }
+} */
+
+@media (min-width: 1200px) {
+  .app {
+    max-width: 1200px;
+    /* Обмежуємо загальну ширину додатка по центру */
+    margin: 0 auto;
+    padding: 40px 24px;
+
+    display: flex;
+    /* Змінюємо на стовпчик: усе шикується строго зверху вниз */
+    flex-direction: column;
+    gap: 32px;
+    /* Гарний великий відступ між блоками */
+  }
+
+  /* Заголовок */
+  .app h1 {
+    margin-bottom: 8px;
+  }
+
+  /* САЙДБАР (Форма + Пошук) — тепер він повністю НАД списком */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Відступ між формою та пошуком всередині сайдбару */
+
+    /* Обмежуємо ширину лівої частини, щоб інпути не розтягувалися 
+       на весь гігантський екран комп'ютера, а виглядали акуратно */
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* СПИСОК КОНТАКТІВ — стоїть строго під сайдбаром */
+  .app>ul {
+    width: 100%;
+    max-width: 100%;
+    /* Дозволяємо списку займати всю ширину десктопа */
+    margin: 0;
+  }
+}

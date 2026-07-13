@@ -1,0 +1,58 @@
+/* .list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item {
+    max-width: 600px;
+    list-style: none;
+} */
+
+/* --- Мобільний режим (Базовий) --- */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* На мобільці картки в один стовпчик */
+    gap: 12px;
+}
+
+/* --- Планшетний режим --- */
+@media (min-width: 768px) {
+    .list {
+        flex-direction: row;
+        /* Дозволяємо карткам ставати в ряд */
+        flex-wrap: wrap;
+        /* Дозволяємо переноситися */
+        gap: 16px;
+    }
+
+    .item {
+        /* Розрахунок на 3 колонки для планшета: (100% - 2 проміжки по 16px) / 3 */
+        flex: 0 1 calc((100% - 32px) / 3);
+    }
+}
+
+/* --- Десктопний режим (від 1200px) --- */
+@media (min-width: 1200px) {
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        /* Залишаємо такий самий відступ, як на зразку */
+    }
+
+    .item {
+        /* ОСЬ ТУТ МАГІЯ НА 4 КОЛОНКИ */
+        /* Формула для 4 колонок: (100% - 3 проміжки по 16px) / 4 */
+        flex: 0 1 calc((100% - 48px) / 4);
+
+        /* Додатковий захист від розтягування (максимальна ширина картки) */
+        max-width: calc((100% - 48px) / 4);
+    }
+}

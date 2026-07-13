@@ -1,0 +1,55 @@
+/* .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.text {  
+  line-height: 1.5;
+} */
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form label {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* Ваш клас title, який застосовано до <Field /> */
+.title {
+  padding: 6px 8px;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.form button {
+  align-self: center;
+  /* Кнопка по центру всередині форми */
+  padding: 4px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.form button:hover {
+  background-color: #e5e5e5;
+}
