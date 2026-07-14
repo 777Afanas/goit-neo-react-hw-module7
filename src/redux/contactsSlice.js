@@ -52,7 +52,6 @@ const contactsSlice = createSlice({
       }),
 });
 
-// export const { addContact, deleteContact } = contactsSlice.actions;
 export const contactsSliceReducer = contactsSlice.reducer;
 export const selectContacts = state => state.contacts.items;
 export const selectLoading = state => state.contacts.loading;
